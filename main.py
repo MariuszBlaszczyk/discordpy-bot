@@ -29,7 +29,7 @@ async def bbj(ctx):
 @bot.command()
 async def ai(ctx, message):
     try:
-        response = requests.post('http://your_external_ip_address:8000/', data= {"message": message})
+        response = requests.post("IP_MAKE", data= {"message": message})
         if response.status_code == 200:
             await ctx.send("Sent message '(message)' to external IP. Response: {response.content)")
         else:
