@@ -21,6 +21,10 @@ async def ping(ctx):
 @bot.command()
 async def hello(ctx):
     await ctx.send("Choo choo! 🚅")
+    
+    @bot.command()
+async def bbj(ctx):
+    await ctx.send("Raków RKS !!!")
 
 
 bot.run(os.environ["DISCORD_TOKEN"])
