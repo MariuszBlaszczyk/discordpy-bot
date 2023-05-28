@@ -26,7 +26,7 @@ async def hello(ctx):
 async def ai(ctx, *, text: str):
     async with aiohttp.ClientSession() as session:
         try:
-            async with session.post('IP_MAKE', data=text) as resp:
+            async with session.post(os.environ["IP_MAKE"], data=text) as resp:
                 if resp.status == 200:
                     response_text = await resp.text()
                     await ctx.send(response_text)
