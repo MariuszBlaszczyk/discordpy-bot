@@ -31,11 +31,11 @@ async def bbj(ctx):
 async def ai(ctx, text):
     try:
         async with aiohttp.ClientSession() as session:
-            async with session.post(os.environ["IP_MAKE"], data={'text': text)) as response:
+            async with session.post(os.environ["IP_MAKE"], data={'text': text}) as response:
                 result = await response.text()
-                await ctx.send("External IP response: (result)")
+                await ctx.send(f"External IP response: {result}")
     except Exception as e:
-    await ctx.send(f"An error occurred: {e}")
+        await ctx.send(f"An error occurred: {e}")
     
 
 bot.run(os.environ["DISCORD_TOKEN"])
