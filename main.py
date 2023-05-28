@@ -22,6 +22,10 @@ async def ping(ctx):
 async def hello(ctx):
     await ctx.send("Choo choo! <@953629691691012167>  🚅")
     
+    @bot.command()
+async def BBJ(ctx):
+    await ctx.send("RAKÓW RKS !!!")
+    
 @bot.command(brief='Podaj mi tekst do przetworzenia', usage='!ai <tekst>')
 async def ai(ctx, *, text: str):
     async with aiohttp.ClientSession() as session:
