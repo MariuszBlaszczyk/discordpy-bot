@@ -28,7 +28,7 @@ async def bbj(ctx):
     await ctx.send("Raków RKS !!!")
     
 @bot.command()
-async def ai(ctx,, text):
+async def ai(ctx, text):
     try:
         async with aiohttp.ClientSession() as session:
             async with session.post(os.environ["IP_MAKE"], data={'text': text)) as response:
