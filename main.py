@@ -22,7 +22,7 @@ async def ping(ctx):
 async def hello(ctx):
     await ctx.send("Choo choo! 🚅")
     
-    @bot.command()
+@bot.command()
 async def bbj(ctx):
     await ctx.send("Raków RKS !!!")
 
